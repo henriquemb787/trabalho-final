@@ -2,28 +2,28 @@ def inicial():
     import arquivos
 
     while True:
-        print("\033c", end="")  # Limpa a tela do terminal
+
         opcao = input("""
-        --- Cadastro de usuários ---
-        1. Adicionar
-        2. Pesquisar
-        3. Remover
-        4. Listar todos
-                    
+        --- Py Bank ---
+        1. Sacar dinheiro
+        2. Depositar dinheiro
+        3. Pix
+
         Selecione uma opção (0 para sair): """)
 
-        
         if opcao == "0":
+            print("Obrigado por usar o Py Bank!")
             break
 
-        if opcao == "1":
-            arquivos.adicionar_usuario()
+        elif opcao == "1":
+            arquivos.retirar()
 
         elif opcao == "2":
-            arquivos.pesquisar_usuario()
+            arquivos.depositar()
 
-        elif opcao == "3":
-            arquivos.remover_usuario()
+        
+        
 
-        elif opcao == "4":
-            arquivos.listar_usuarios()
+        else:
+            print("Opção inválida.")
+        

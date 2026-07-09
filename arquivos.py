@@ -1,38 +1,28 @@
+def retirar():
+    senha_correta = "1234"
+    valor = float(input("Digite o valor do saque: "))
 
-usuarios = {"admin": 12345}
-
-def adicionar_usuario():
-    print("\033c", end="")  # Limpa a tela do terminal
-    print("-- ADICIONAR USUÁRIOS ---")
-    usuario = input("Digite o usuário: ")
-    senha = input("Digite a senha: ")
-    usuarios[usuario] = senha
-
-def pesquisar_usuario():
-    print("\033c", end="")  # Limpa a tela do terminal
-    print("-- PESQUISAR USUÁRIOS ---")
-    usuario = input("Digite o usuário para pesquisar: ")
-    if usuario in usuarios:
-        print(f"Usuário encontrado: {usuario}")
-        input("Pressione Enter para continuar...")
+    if valor <= 0:
+        print("O valor do saque deve ser maior que zero.")
     else:
-        print("Usuário não encontrado!")
+        senha = input("Digite sua senha para confirmar: ")
 
-def remover_usuario():
-    print("\033c", end="")  # Limpa a tela do terminal
-    print("-- REMOVER USUÁRIO ---")
-    usuario = input("Digite o usuário para remover: ")
-    if usuario in usuarios:
-        del usuarios[usuario]
-        print("Usuário removido com sucesso!")
-    else:
-        print("Usuário não encontrado!")
+        if senha == senha_correta:
+            print("Saque realizado com sucesso!")
+        else:
+            print("Senha incorreta.")
 
-def listar_usuarios():
-    print("\033c", end="")  # Limpa a tela do terminal
-    print("-- LISTA DE USUÁRIOS CADASTRADOS ---")
-    if usuarios:
-        for usuario in usuarios:
-            print(usuario)
+
+def depositar():
+    senha_correta = "1234"
+    valor = float(input("Digite o valor do depósito: "))
+
+    if valor <= 0:
+        print("O valor do depósito deve ser maior que zero.")
     else:
-        print("Nenhum usuário cadastrado!")
+        senha = input("Digite sua senha para confirmar: ")
+
+        if senha == senha_correta:
+            print("Depósito realizado com sucesso!")
+        else:
+            print("Senha incorreta.")
